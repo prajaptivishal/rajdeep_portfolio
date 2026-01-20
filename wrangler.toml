@@ -4,8 +4,8 @@ pages_build_output_dir = "dist"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
-bucket_name = "rajdeep-portfolio-images"
-preview_bucket_name = "rajdeep-portfolio-images-preview"
+bucket_name = "rajdeep-portfolio"
+preview_bucket_name = "rajdeep-portfolio"
 
 [vars]
 # ADMIN_PASSWORD will be set in the Cloudflare Dashboard
