@@ -16,6 +16,16 @@ const Home = () => {
       <div className="mb-20 space-y-12">
         {/* Header */}
         <div className="text-center space-y-6">
+          {/* Profile Image */}
+          <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 mb-6">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-stone-100 to-stone-500 opacity-20 blur-lg"></div>
+            <img 
+              src="/profile.png" 
+              alt="Kumar Rajdeep" 
+              className="relative w-full h-full object-cover rounded-full border-2 border-stone-800 shadow-2xl"
+            />
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-r from-stone-100 to-stone-400 bg-clip-text text-transparent uppercase">
             Kumar Rajdeep
           </h1>
