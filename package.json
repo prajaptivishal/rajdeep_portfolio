@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "wrangler pages deploy dist",
-    "preview": "npm run build && wrangler pages dev dist",
+    "deploy": "npx wrangler pages deploy dist",
+    "preview": "npm run build && npx wrangler pages dev dist",
     "preview:vite": "vite preview"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
-    "vite": "^6.4.1"
+    "vite": "^6.4.1",
+    "wrangler": "^4.59.2"
   }
 }
