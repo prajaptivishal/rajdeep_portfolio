@@ -1,0 +1,11 @@
+name = "rajdeep-portfolio"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "dist"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "rajdeep-portfolio-images"
+preview_bucket_name = "rajdeep-portfolio-images-preview"
+
+[vars]
+# ADMIN_PASSWORD will be set in the Cloudflare Dashboard
