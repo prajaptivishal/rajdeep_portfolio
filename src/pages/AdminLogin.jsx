@@ -18,7 +18,7 @@ const AdminLogin = () => {
       await login(password);
       navigate('/admin/dashboard');
     } catch (err) {
-      setError('Invalid password');
+      setError(err.message || 'Login failed');
     } finally {
       setIsLoading(false);
     }

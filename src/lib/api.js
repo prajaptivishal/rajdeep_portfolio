@@ -6,7 +6,10 @@ export const login = async (password) => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ password }),
   });
-  if (!res.ok) throw new Error('Login failed');
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.error || 'Login failed');
+  }
   const data = await res.json();
   Cookies.set('admin_token', data.token, { expires: 1 }); // 1 day
   return data;
