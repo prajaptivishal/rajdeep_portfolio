@@ -3,26 +3,28 @@ import React from 'react';
 const MasonryGrid = ({ images }) => {
   if (!images || images.length === 0) {
     return (
-      <div className="text-center text-zinc-400 py-24 bg-zinc-50 rounded-3xl border border-dashed border-zinc-200">
-        <p className="text-lg">No designs uploaded yet.</p>
+      <div className="text-center text-stone-400 py-24 border border-dashed border-stone-200">
+        <p className="text-lg font-light">No designs uploaded yet.</p>
       </div>
     );
   }
 
   return (
-    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
       {images.map((img) => (
-        <div key={img.key} className="break-inside-avoid relative group overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-zinc-100">
-          <img 
-            src={img.url} 
-            alt={img.key} 
-            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-zinc-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <span className="text-white font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+        <div key={img.key} className="break-inside-avoid relative group">
+          <div className="overflow-hidden bg-stone-100">
+            <img 
+              src={img.url} 
+              alt={img.key} 
+              className="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+             <p className="text-xs uppercase tracking-widest text-stone-500 truncate">
               {img.key.split('-').slice(1).join('-')}
-            </span>
+            </p>
           </div>
         </div>
       ))}

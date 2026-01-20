@@ -7,7 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-stone-950 text-stone-100 font-sans">
+      <div className="min-h-screen font-sans antialiased">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<AdminLogin />} />
