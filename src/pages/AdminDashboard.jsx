@@ -40,16 +40,16 @@ const AdminDashboard = () => {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-[#fdfbf7] text-slate-900">
       <div className="container mx-auto px-6 py-12 max-w-6xl">
         <header className="flex justify-between items-end mb-16 border-b border-slate-200 pb-6">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2">Admin Panel</p>
-            <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
+            <p className="text-xs font-bold uppercase tracking-widest text-[#cca43b] mb-2">Admin Panel</p>
+            <h1 className="text-3xl font-bold text-[#1a4d2e]">Dashboard</h1>
           </div>
           <button 
             onClick={logout}
-            className="text-sm font-medium text-red-500 hover:text-red-700 transition-colors flex items-center gap-2 bg-red-50 px-4 py-2 rounded-lg hover:bg-red-100"
+            className="text-sm font-medium text-red-500 hover:text-red-700 transition-colors flex items-center gap-2 bg-red-50 px-4 py-2 rounded-sm hover:bg-red-100"
           >
             <LogOut size={16} />
             Logout
@@ -61,16 +61,16 @@ const AdminDashboard = () => {
           <div 
             {...getRootProps()} 
             className={`
-              border-2 border-dashed rounded-3xl p-16 text-center cursor-pointer transition-all duration-300
+              border-2 border-dashed rounded-sm p-16 text-center cursor-pointer transition-all duration-300
               ${isDragActive 
-                ? 'border-indigo-500 bg-indigo-50' 
-                : 'border-slate-300 hover:border-indigo-400 hover:bg-slate-100'
+                ? 'border-[#1a4d2e] bg-emerald-50' 
+                : 'border-slate-300 hover:border-[#1a4d2e] hover:bg-white'
               }
             `}
           >
             <input {...getInputProps()} />
             <div className="flex flex-col items-center gap-6">
-              <div className={`p-5 rounded-full ${isDragActive ? 'bg-indigo-100 text-indigo-600' : 'bg-white text-slate-400 shadow-sm'}`}>
+              <div className={`p-5 rounded-full ${isDragActive ? 'bg-[#1a4d2e] text-white' : 'bg-white text-slate-400 shadow-sm'}`}>
                 {uploadMutation.isPending ? (
                   <Loader2 className="w-8 h-8 animate-spin" />
                 ) : (
@@ -90,14 +90,14 @@ const AdminDashboard = () => {
         {/* Gallery Management */}
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <ImageIcon className="text-indigo-600" />
+            <ImageIcon className="text-[#1a4d2e]" />
             Gallery <span className="text-slate-400 text-sm font-normal ml-2">({images?.length || 0})</span>
           </h2>
         </div>
 
         {isLoading ? (
           <div className="flex justify-center py-24">
-            <Loader2 className="w-8 h-8 animate-spin text-indigo-600" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#1a4d2e]" />
           </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">

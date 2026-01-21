@@ -63,68 +63,93 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
-      <div className="container mx-auto px-4 md:px-8 py-12 max-w-6xl">
+    <div className="min-h-screen bg-[#fdfbf7] text-slate-900 font-sans selection:bg-[#1a4d2e] selection:text-white">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         
-        {/* Header / Hero Section */}
-        <header className="mb-20 md:mb-32 pt-8 md:pt-20">
-          <div className="flex flex-col md:flex-row gap-8 md:items-center justify-between">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold tracking-wide uppercase border border-indigo-100">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                </span>
-                Available for work
-              </div>
-              
-              <div>
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-2">
-                  Kumar Rajdeep
-                </h1>
-                <p className="text-xl md:text-2xl font-light text-slate-500 max-w-2xl">
-                  Graphic Designer & Technical Professional crafting digital experiences with precision.
-                </p>
-              </div>
+        {/* Header / Hero Section - Grafik Style */}
+        <header className="min-h-screen flex flex-col lg:flex-row items-center justify-between py-12 lg:py-0 relative overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 left-0 w-64 h-64 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+          <div className="hidden lg:block absolute top-20 left-10 opacity-10">
+             <div className="flex gap-2">
+               {[...Array(5)].map((_, i) => (
+                 <div key={i} className="w-1 h-20 bg-slate-900 rotate-45 transform origin-bottom"></div>
+               ))}
+             </div>
+          </div>
 
-              <div className="flex flex-wrap gap-4 pt-4">
-                <a 
-                  href="mailto:kumarrajdeep1004@gmail.com" 
-                  className="px-6 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200 hover:shadow-indigo-200 flex items-center gap-2"
-                >
-                  Contact Me <ArrowUpRight size={18} />
-                </a>
-                <a 
-                  href="/Rajdeep_CV.pdf" 
-                  download 
-                  className="px-6 py-3 rounded-xl bg-white text-slate-700 border border-slate-200 font-medium hover:border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-2"
-                >
-                  Download CV <Download className="w-4 h-4" />
-                </a>
-              </div>
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 z-10 pt-20 lg:pt-0 space-y-8">
+            <div className="flex items-center gap-4">
+              <div className="h-0.5 w-12 bg-[#cca43b]"></div>
+              <span className="text-sm font-bold tracking-widest text-slate-500 uppercase">Hello</span>
+            </div>
+            
+            <div className="space-y-2">
+              <h1 className="text-5xl lg:text-7xl font-bold text-[#cca43b] tracking-tight">
+                I'm Rajdeep
+              </h1>
+              <h2 className="text-5xl lg:text-7xl font-bold text-[#1a4d2e] tracking-tight">
+                Graphic Designer
+              </h2>
             </div>
 
-            <div className="relative hidden md:block">
-              <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-2xl shadow-indigo-100 rotate-3 border-4 border-white">
+            <p className="text-lg text-slate-600 max-w-md leading-relaxed">
+              Graphic Designer & Technical Professional crafting digital experiences with precision. Leading visual strategy and design execution.
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a 
+                href="mailto:kumarrajdeep1004@gmail.com" 
+                className="px-8 py-4 bg-[#1a4d2e] text-white font-bold rounded-sm hover:bg-[#143d24] transition-all shadow-lg shadow-emerald-900/20"
+              >
+                Let's Talk
+              </a>
+              <a 
+                href="/Rajdeep_CV.pdf" 
+                download 
+                className="px-8 py-4 bg-transparent border-2 border-[#1a4d2e] text-[#1a4d2e] font-bold rounded-sm hover:bg-[#1a4d2e] hover:text-white transition-all"
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          {/* Right Image with Organic Shape */}
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-16 lg:mt-0">
+            <div className="relative w-[350px] h-[450px] lg:w-[500px] lg:h-[600px]">
+              {/* Dark Green Abstract Shape */}
+              <div className="absolute inset-0 bg-[#1a4d2e] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] rotate-3 transform scale-110 -z-10"></div>
+              
+              {/* Image Container */}
+              <div className="w-full h-full overflow-hidden rounded-[40%_60%_70%_30%/40%_50%_60%_50%] border-4 border-white shadow-2xl">
                 <img 
                   src="/profile.png" 
                   alt="Kumar Rajdeep" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full bg-indigo-600/10 rounded-2xl -rotate-6"></div>
+
+              {/* Decorative Floating Element */}
+              <div className="absolute -bottom-10 -left-10 bg-white p-6 shadow-xl rounded-lg hidden md:block animate-bounce duration-[3000ms]">
+                <div className="flex items-center gap-3">
+                   <div className="bg-[#cca43b] p-3 rounded-full text-white">
+                     <Star size={24} fill="currentColor" />
+                   </div>
+                   <div>
+                     <p className="text-xs text-slate-500 font-bold uppercase">Experience</p>
+                     <p className="text-xl font-bold text-[#1a4d2e]">4+ Years</p>
+                   </div>
+                </div>
+              </div>
             </div>
           </div>
         </header>
 
         {/* My Journey - Roadmap Structure */}
         <section className="mb-24 md:mb-32">
-          <div className="flex items-center gap-4 mb-16">
-            <div className="h-px bg-slate-200 flex-1"></div>
-            <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-              <MapPin className="text-indigo-600" /> My Journey
-            </h2>
-            <div className="h-px bg-slate-200 flex-1"></div>
+          <div className="flex items-center justify-center gap-4 mb-20">
+             <h2 className="text-4xl font-bold text-[#1a4d2e] text-center">My Journey</h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 relative">
@@ -134,10 +159,10 @@ const Home = () => {
             {/* Experience Column */}
             <div className="space-y-12">
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-2 bg-indigo-50 rounded-lg text-indigo-600">
+                <div className="p-2 bg-[#1a4d2e] rounded-lg text-white">
                   <Briefcase size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">Professional Experience</h3>
+                <h3 className="text-xl font-bold text-[#1a4d2e]">Professional Experience</h3>
               </div>
 
               <div className="relative space-y-12 pl-8 lg:pl-0">
@@ -147,13 +172,13 @@ const Home = () => {
                 {experience.map((job, index) => (
                   <div key={index} className="relative group">
                     {/* Timeline Dot */}
-                    <div className="absolute -left-[37px] lg:left-auto lg:-right-[53px] top-2 w-5 h-5 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
+                    <div className="absolute -left-[37px] lg:left-auto lg:-right-[53px] top-2 w-5 h-5 rounded-full border-4 border-white bg-[#cca43b] shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
                     
-                    <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-100/50 transition-all duration-300">
+                    <div className="bg-white p-6 rounded-sm border-l-4 border-[#1a4d2e] shadow-sm hover:shadow-xl transition-all duration-300">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                         <div>
-                          <h4 className="text-lg font-bold text-slate-900">{job.title}</h4>
-                          <p className="text-indigo-600 font-medium">{job.company}</p>
+                          <h4 className="text-lg font-bold text-[#1a4d2e]">{job.title}</h4>
+                          <p className="text-[#cca43b] font-medium">{job.company}</p>
                         </div>
                         <div className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-1 rounded">
                           <Calendar size={12} /> {job.period}
@@ -167,7 +192,7 @@ const Home = () => {
                       <ul className="space-y-2">
                         {job.details.map((detail, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-slate-500">
-                            <CheckCircle2 size={16} className="text-indigo-400 shrink-0 mt-0.5" />
+                            <CheckCircle2 size={16} className="text-[#1a4d2e] shrink-0 mt-0.5" />
                             <span>{detail.replace(/^• /, '')}</span>
                           </li>
                         ))}
@@ -181,8 +206,8 @@ const Home = () => {
             {/* Education Column */}
             <div className="space-y-12">
               <div className="flex items-center gap-3 mb-8 lg:justify-end">
-                <h3 className="text-xl font-bold text-slate-800 order-2 lg:order-1">Education History</h3>
-                <div className="p-2 bg-emerald-50 rounded-lg text-emerald-600 order-1 lg:order-2">
+                <h3 className="text-xl font-bold text-[#1a4d2e] order-2 lg:order-1">Education History</h3>
+                <div className="p-2 bg-[#cca43b] rounded-lg text-white order-1 lg:order-2">
                   <GraduationCap size={24} />
                 </div>
               </div>
@@ -194,12 +219,12 @@ const Home = () => {
                 {education.map((edu, index) => (
                   <div key={index} className="relative group">
                     {/* Timeline Dot */}
-                    <div className="absolute -left-[37px] lg:left-auto lg:-left-[53px] top-2 w-5 h-5 rounded-full border-4 border-white bg-emerald-500 shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
+                    <div className="absolute -left-[37px] lg:left-auto lg:-left-[53px] top-2 w-5 h-5 rounded-full border-4 border-white bg-[#1a4d2e] shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
 
-                    <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-emerald-100/50 transition-all duration-300">
+                    <div className="bg-white p-6 rounded-sm border-l-4 border-[#cca43b] shadow-sm hover:shadow-xl transition-all duration-300">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-lg font-bold text-slate-900">{edu.degree}</h4>
-                        <span className={`text-xs font-bold px-2 py-1 rounded uppercase tracking-wider ${edu.status === 'current' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-100 text-slate-500'}`}>
+                        <h4 className="text-lg font-bold text-[#1a4d2e]">{edu.degree}</h4>
+                        <span className={`text-xs font-bold px-2 py-1 rounded uppercase tracking-wider ${edu.status === 'current' ? 'bg-[#1a4d2e] text-white' : 'bg-slate-100 text-slate-500'}`}>
                           {edu.year}
                         </span>
                       </div>
@@ -217,14 +242,14 @@ const Home = () => {
 
         {/* Technical Skills - Cards */}
         <section className="mb-24 md:mb-32">
-          <div className="bg-slate-900 rounded-3xl p-8 md:p-16 text-white overflow-hidden relative">
-            <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
-            <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-emerald-500 rounded-full blur-3xl opacity-20"></div>
+          <div className="bg-[#1a4d2e] rounded-3xl p-8 md:p-16 text-white overflow-hidden relative">
+            <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-[#cca43b] rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-white rounded-full blur-3xl opacity-10"></div>
             
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-12">
                 <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
-                  <Code size={24} className="text-indigo-300" />
+                  <Code size={24} className="text-[#cca43b]" />
                 </div>
                 <h2 className="text-2xl font-bold">Technical Expertise</h2>
               </div>
@@ -240,10 +265,10 @@ const Home = () => {
                   { name: 'Java', level: 'Intermediate' },
                   { name: 'C/C++', level: 'Intermediate' }
                 ].map((skill, idx) => (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
-                    <h3 className="font-medium text-indigo-100 mb-1">{skill.name}</h3>
-                    <div className="flex items-center gap-1 text-xs text-slate-400">
-                      <Star size={10} className="fill-current text-indigo-400" /> {skill.level}
+                  <div key={idx} className="bg-white/5 border border-white/10 rounded-sm p-4 hover:bg-white/10 transition-colors group">
+                    <h3 className="font-medium text-white mb-1 group-hover:text-[#cca43b] transition-colors">{skill.name}</h3>
+                    <div className="flex items-center gap-1 text-xs text-slate-300">
+                      <Star size={10} className="fill-current text-[#cca43b]" /> {skill.level}
                     </div>
                   </div>
                 ))}
@@ -253,20 +278,20 @@ const Home = () => {
         </section>
 
         {/* Portfolio Section */}
-        <section className="pt-12">
+        <section className="pt-12 mb-20">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="w-8 h-px bg-indigo-500"></span>
-                <span className="text-indigo-600 font-bold uppercase tracking-widest text-xs">Portfolio</span>
+                <span className="w-8 h-px bg-[#cca43b]"></span>
+                <span className="text-[#cca43b] font-bold uppercase tracking-widest text-xs">Portfolio</span>
               </div>
-              <h2 className="text-4xl font-bold text-slate-900">Selected Works</h2>
+              <h2 className="text-4xl font-bold text-[#1a4d2e]">Selected Works</h2>
             </div>
           </div>
 
           {isLoading ? (
             <div className="flex justify-center items-center h-64">
-              <Loader2 className="w-10 h-10 animate-spin text-indigo-600" />
+              <Loader2 className="w-10 h-10 animate-spin text-[#1a4d2e]" />
             </div>
           ) : error ? (
             <div className="text-center text-red-500 py-10 bg-red-50 rounded-xl">

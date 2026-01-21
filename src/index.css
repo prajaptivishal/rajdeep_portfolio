@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900;
+    @apply bg-[#fdfbf7] text-slate-900 antialiased selection:bg-[#1a4d2e] selection:text-white;
   }
 }
